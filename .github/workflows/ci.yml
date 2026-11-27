@@ -66,8 +66,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      # ИНЦИДЕНТ 1: для push в GHCR права пока недостаточно.
-      # packages: write
+      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
