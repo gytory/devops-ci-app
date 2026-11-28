@@ -132,7 +132,8 @@ jobs:
         run: |
           docker push "${IMAGE_NAME}:${GITHUB_SHA}"
           docker push "${IMAGE_NAME}:latest"
-    deploy:
+
+  deploy:
     needs: image
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: [self-hosted, devops-vm]
